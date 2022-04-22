@@ -17,6 +17,7 @@ resource "azurerm_resource_group" "myresourcegroup" {
 
   tags = {
     environment = "Production"
+    Department = "devops"
   }
 }
 
@@ -136,7 +137,8 @@ resource "azurerm_virtual_machine" "catapp" {
   }
 
   tags = {
-    Department = devops
+    Billable  = "true"
+
   }
 
   # Added to allow destroy to work correctly.
